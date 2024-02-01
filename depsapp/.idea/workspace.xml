@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfa6aba7-5dd0-4bdc-bbed-eefa396d407b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/first.clj" afterDir="false" />
-    </list>
+    <list default="true" id="dfa6aba7-5dd0-4bdc-bbed-eefa396d407b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +110,7 @@
       <updated>1706801340666</updated>
       <workItem from="1706801341713" duration="1049000" />
       <workItem from="1706802396574" duration="64000" />
-      <workItem from="1706802462097" duration="418000" />
+      <workItem from="1706802462097" duration="513000" />
     </task>
     <servers />
   </component>

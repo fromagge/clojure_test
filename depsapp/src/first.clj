@@ -8,19 +8,16 @@
 (defn xor [arg1 arg2]
   (not= arg1 arg2))
 
-(defn get-iva
-  [item]
-  (->> item
-       (:taxable/taxes)
-       (first)
-       (:tax/rate)))
+(def iva_rate 19)
 
-(defn get-ret
-  [item]
-  (->> item
-       (:retentionable/retentions)
-       (first)
-       (:retention/rate)))
+(def retention_rate 1)
+
+(defn has_iva? [{:taxable/keys [taxes]}]
+  (some #(= iva_rate (:tax/rate %)) taxes))
+
+(defn has_ret? [{:retentionable/keys [retentions]}]
+  (some #(= retention_rate (:retention/rate %)) retentions))
+
 
 ;; 1. At least have one item that has :iva 19%
 ;; 2. At least one item has retention :ret_fuente 1%
@@ -29,8 +26,7 @@
 (defn get_invoice_item_conditions
   [invoice_items]
   (->> invoice_items
-       (filter (fn [item] (xor (= (get-iva item) 19) (= (get-ret item) 1)) ),,,)))
-
+       (filter (fn [item] (xor (has_iva? item) (has_ret? item))))))
 
 (defn run [& args] (println (get_invoice_item_conditions invoice_items)))
 ;; => Only "ii3" and "ii4" meet the conditions
